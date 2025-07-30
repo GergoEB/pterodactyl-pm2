@@ -1,0 +1,33 @@
+{
+    "_comment": "DO NOT EDIT: FILE GENERATED AUTOMATICALLY BY PTERODACTYL PANEL - PTERODACTYL.IO",
+    "meta": {
+        "version": "PTDL_v2",
+        "update_url": null
+    },
+    "exported_at": "2025-07-30T19:26:34+01:00",
+    "name": "Node - PM2",
+    "author": "example@example.com",
+    "description": "PM2 Egg for Pterodactyl",
+    "features": null,
+    "docker_images": {
+        "PM2 - 20": "ghcr.io\/GergoEB\/pterodactyl-pm2:20",
+        "PM2 - 22": "ghcr.io\/GergoEB\/pterodactyl-pm2:22",
+        "PM2 - 24": "ghcr.io\/GergoEB\/pterodactyl-pm2:24"
+    },
+    "file_denylist": [],
+    "startup": "echo \"Set an instance specific startup command, likely something like pm2 start ecosystem.json\" && exit 0",
+    "config": {
+        "files": "{}",
+        "startup": "{\r\n    \"done\": \"change this part\"\r\n}",
+        "logs": "{}",
+        "stop": "^^C"
+    },
+    "scripts": {
+        "installation": {
+            "script": "#!\/bin\/bash\r\n\r\napt update\r\napt install -y git curl jq file unzip make gcc g++ python python-dev libtool\r\n\r\necho -e \"Updating NPM\"\r\nnpm install npm@latest -g\r\n\r\necho -e \"Done\"\r\n\r\nexit 0",
+            "container": "node:20",
+            "entrypoint": "bash"
+        }
+    },
+    "variables": []
+}
