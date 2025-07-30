@@ -75,7 +75,7 @@ jobs:
           cache-from: type=gha
           cache-to: type=gha,mode=max
           build-args: |
-            NODE_VERSION=${{ matrix.node-version }} # Pass the Node.js version as a build-arg
+            NODE_VERSION=${{ matrix.node-version }}
 
       # Sign the resulting Docker image digest except on PRs.
       - name: Sign the published Docker image
