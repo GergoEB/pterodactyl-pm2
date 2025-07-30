@@ -1,7 +1,7 @@
 # Use a build argument for the Node.js version
 ARG NODE_VERSION=22
 
-FROM node:${NODE_VERSION}-bullseye-slim
+FROM node:${NODE_VERSION}
 
 # Im not tech support, no emails please
 LABEL author="GergoEB" maintainer="example@example.com"
